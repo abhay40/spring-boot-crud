@@ -6,156 +6,41 @@ import javax.persistence.Entity;
 import javax.persistence.Id;  
 import javax.persistence.Table;
 @Entity
-@Table
+@Table(name="spproperties.PROPERTY")
 public class Property {
-	public Integer getpId() {
-		return pId;
-	}
-
-	public void setpId(Integer pId) {
-		this.pId = pId;
-	}
-
-	public String getpName() {
-		return pName;
-	}
-
-	public void setpName(String pName) {
-		this.pName = pName;
-	}
-
-	public Date getEntryDt() {
-		return entryDt;
-	}
-
-	public void setEntryDt(Date entryDt) {
-		this.entryDt = entryDt;
-	}
-
-	public Date getModDt() {
-		return modDt;
-	}
-
-	public void setModDt(Date modDt) {
-		this.modDt = modDt;
-	}
-
-	public Integer getpCost() {
-		return pCost;
-	}
-
-	public void setpCost(Integer pCost) {
-		this.pCost = pCost;
-	}
-
-	public Integer getAdvance() {
-		return advance;
-	}
-
-	public void setAdvance(Integer advance) {
-		this.advance = advance;
-	}
-
-	public Integer getKharchaCommission() {
-		return kharchaCommission;
-	}
-
-	public void setKharchaCommission(Integer kharchaCommission) {
-		this.kharchaCommission = kharchaCommission;
-	}
-
-	public Date getTimeAllotted() {
-		return TimeAllotted;
-	}
-
-	public void setTimeAllotted(Date timeAllotted) {
-		TimeAllotted = timeAllotted;
-	}
-
-	public Date getTimeRemaining() {
-		return TimeRemaining;
-	}
-
-	public void setTimeRemaining(Date timeRemaining) {
-		TimeRemaining = timeRemaining;
-	}
-
-	public Integer getRemainingCost() {
-		return remainingCost;
-	}
-
-	public void setRemainingCost(Integer remainingCost) {
-		this.remainingCost = remainingCost;
-	}
-
-	public Integer getTotalCost() {
-		return TotalCost;
-	}
-
-	public void setTotalCost(Integer totalCost) {
-		TotalCost = totalCost;
-	}
-
-	public String getPropSize() {
-		return propSize;
-	}
-
-	public void setPropSize(String propSize) {
-		this.propSize = propSize;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	@Id
-	@Column
+	@Column(name = "PID")
 	private Integer pId;
 	
-	@Column
+	@Column(name = "PNAME ")
 	private String pName;
 	
-	@Column
+	@Column(name = "ENTRY_DT")
 	private Date entryDt;
 	
-	@Column
+	@Column(name = "MOD_DT")
 	private Date modDt;
 	
-	@Column
+	@Column(name = "PCOST")
 	private Integer pCost;
 	
-	@Column
+	@Column(name = "ADVANCE")
 	private Integer advance;
 	
-	@Column
-	private Integer kharchaCommission;
+	@Column(name = "COMMISSION")
+	private Integer commission;
 	
-	@Column
+	@Column(name = "TIME_ALLOTED")
 	private Date TimeAllotted;
 	
-	@Column
-	private Date TimeRemaining;
 	
-	@Column
-	private Integer remainingCost;
-	
-	@Column
+	@Column(name = "TOTAL_COST")
 	private Integer TotalCost;
 	
-	@Column
+	@Column(name = "PROPERTY_SIZE")
 	private String propSize;
 	
-	@Column
-	private String status;
 	
-	
-	
-	
-	
-	
-
+	@Column(name = "DEPOSIT_AMOUNT")
+	private Integer depositamount;
 }
