@@ -30,7 +30,7 @@ public class SPpropertyController
 	@GetMapping("/property/{pid}")  
 	private Property getProperty(@PathVariable("pid") int pid)   
 	{  
-	return propertyService.getPropertyById(pid);  
+	return propertyService.getPropertyByPId(pid);  
 	}  
 	//creating a delete mapping that deletes a specified book  
 	@DeleteMapping("/property/{pid}")  

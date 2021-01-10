@@ -19,9 +19,9 @@ public class PropertyService {
 	  return property;  
 	}  
 	//getting a specific record by using the method findById() of CrudRepository  
-	public Property getPropertyById(int id)   
+	public Property getPropertyByPId(int id)   
 	{  
-	return propertyRepository.findById(id).get();  
+	return propertyRepository.findByPId(id).get();  
 	}  
 	//saving a specific record by using the method save() of CrudRepository  
 	public void saveOrUpdate(Property property)   
@@ -31,7 +31,7 @@ public class PropertyService {
 	//deleting a specific record by using the method deleteById() of CrudRepository  
 	public void delete(int id)   
 	{  
-	  propertyRepository.deleteById(id);  
+	  propertyRepository.deleteByPId(id);  
 	}  
 	//updating a record  
 	public void update(Property property, int id)   

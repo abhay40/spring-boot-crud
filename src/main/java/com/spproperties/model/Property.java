@@ -12,9 +12,119 @@ public class Property {
 	@Column(name = "PID")
 	private Integer pId;
 	
-	@Column(name = "PNAME ")
+	@Column(name = "PNAME")
 	private String pName;
 	
+	public Integer getpId() {
+		return pId;
+	}
+
+
+	public void setpId(Integer pId) {
+		this.pId = pId;
+	}
+
+
+	public String getpName() {
+		return pName;
+	}
+
+
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+
+
+	public Date getEntryDt() {
+		return entryDt;
+	}
+
+
+	public void setEntryDt(Date entryDt) {
+		this.entryDt = entryDt;
+	}
+
+
+	public Date getModDt() {
+		return modDt;
+	}
+
+
+	public void setModDt(Date modDt) {
+		this.modDt = modDt;
+	}
+
+
+	public Integer getpCost() {
+		return pCost;
+	}
+
+
+	public void setpCost(Integer pCost) {
+		this.pCost = pCost;
+	}
+
+
+	public Integer getAdvance() {
+		return advance;
+	}
+
+
+	public void setAdvance(Integer advance) {
+		this.advance = advance;
+	}
+
+
+	public Integer getCommission() {
+		return commission;
+	}
+
+
+	public void setCommission(Integer commission) {
+		this.commission = commission;
+	}
+
+
+	public Date getTimeAllotted() {
+		return TimeAllotted;
+	}
+
+
+	public void setTimeAllotted(Date timeAllotted) {
+		TimeAllotted = timeAllotted;
+	}
+
+
+	public Integer getTotalCost() {
+		return TotalCost;
+	}
+
+
+	public void setTotalCost(Integer totalCost) {
+		TotalCost = totalCost;
+	}
+
+
+	public String getPropSize() {
+		return propSize;
+	}
+
+
+	public void setPropSize(String propSize) {
+		this.propSize = propSize;
+	}
+
+
+	public Integer getDepositamount() {
+		return depositamount;
+	}
+
+
+	public void setDepositamount(Integer depositamount) {
+		this.depositamount = depositamount;
+	}
+
+
 	@Column(name = "ENTRY_DT")
 	private Date entryDt;
 	
@@ -43,4 +153,6 @@ public class Property {
 	
 	@Column(name = "DEPOSIT_AMOUNT")
 	private Integer depositamount;
+	
+	
 }
