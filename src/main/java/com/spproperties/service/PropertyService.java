@@ -1,11 +1,12 @@
 package com.spproperties.service;
-import java.util.ArrayList;  
-import java.util.List;  
-import org.springframework.beans.factory.annotation.Autowired;  
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.spproperties.model.*;
-import com.spproperties.controller.*;
-import com.spproperties.repository.*;
+
+import com.spproperties.model.Property;
+import com.spproperties.repository.PropertyRepository;
 
 @Service
 public class PropertyService {
@@ -21,7 +22,7 @@ public class PropertyService {
 	//getting a specific record by using the method findById() of CrudRepository  
 	public Property getPropertyByPId(int id)   
 	{  
-	return propertyRepository.findByPId(id).get();  
+	return propertyRepository.findById(id).get();  
 	}  
 	//saving a specific record by using the method save() of CrudRepository  
 	public void saveOrUpdate(Property property)   
@@ -31,7 +32,7 @@ public class PropertyService {
 	//deleting a specific record by using the method deleteById() of CrudRepository  
 	public void delete(int id)   
 	{  
-	  propertyRepository.deleteByPId(id);  
+	  propertyRepository.deleteById(id);  
 	}  
 	//updating a record  
 	public void update(Property property, int id)   
