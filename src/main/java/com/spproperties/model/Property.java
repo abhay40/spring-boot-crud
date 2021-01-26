@@ -1,4 +1,5 @@
 package com.spproperties.model;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -39,22 +40,22 @@ public class Property {
 	}
 
 
-	public LocalDateTime getEntryDt() {
+	public Timestamp getEntryDt() {
 		return entryDt;
 	}
 
 
-	public void setEntryDt(LocalDateTime entryDt) {
+	public void setEntryDt(Timestamp entryDt) {
 		this.entryDt = entryDt;
 	}
 
 
-	public LocalDateTime getModDt() {
+	public Timestamp getModDt() {
 		return modDt;
 	}
 
 
-	public void setModDt(LocalDateTime modDt) {
+	public void setModDt(Timestamp modDt) {
 		this.modDt = modDt;
 	}
 
@@ -130,10 +131,10 @@ public class Property {
 
 
 	@Column /* (name = "ENTRY_DT") */
-	private LocalDateTime entryDt;
+	private Timestamp entryDt;
 	
 	@Column /* (name = "MOD_DT") */
-	private LocalDateTime modDt;
+	private Timestamp modDt;
 	
 	@Column /* (name = "PCOST") */
 	private Integer pCost;
