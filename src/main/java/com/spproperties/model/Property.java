@@ -1,158 +1,153 @@
 package com.spproperties.model;
+
+import com.sun.org.apache.xpath.internal.objects.XString;
+
+import java.time.LocalDate;
 import java.util.Date;
 
-import javax.persistence.Column;  
-import javax.persistence.Entity;  
-import javax.persistence.Id;  
-import javax.persistence.Table;
+import javax.persistence.*;
+
 @Entity
-@Table(name="spproperties.PROPERTY")
+@Table //(name = "spproperties.PROPERTY")
 public class Property {
-	@Id
-	@Column(name = "PID")
-	private Integer pId;
-	
-	@Column(name = "PNAME")
-	private String pName;
-	
-	public Integer getpId() {
-		return pId;
-	}
+    @Id
+    @Column /*(name = "PID")*/
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer pId;
+
+    @Column /*(name = "ENTRY_DT")*/
+    private String entryDt;
+
+    @Column /*(name = "MOD_DT")*/
+    private String modDt;
+
+    @Column /*(name = "POST")*/
+    private Integer pCost;
+
+    @Column /*(name = "ADVANCE")*/
+    private Integer advance;
+
+    @Column /*(name = "COMMISSION")*/
+    private Integer commission;
+
+   @Column  /*(name = "TIME_ALLOTTED")*/
+    private String TimeAllotted;
+
+    @Column /*(name = "NAME")*/
+    private String pName;
+
+    @Column /*(name = "TOTAL_COST")*/
+    private Integer TotalCost;
+
+    @Column /*(name = "PROPERTY_SIZE")*/
+    private String propSize;
 
 
-	public void setpId(Integer pId) {
-		this.pId = pId;
-	}
+    @Column /*(name = "DEPOSIT_AMOUNT")*/
+    private Integer depositamount;
 
+    public Integer getpId() {
+        return pId;
+    }
 
-	public String getpName() {
-		return pName;
-	}
+    public void setpId(Integer pId) {
+        this.pId = pId;
+    }
 
+    public String getEntryDt() {
+        return entryDt;
+    }
 
-	public void setpName(String pName) {
-		this.pName = pName;
-	}
+    public void setEntryDt(String entryDt) {
+        this.entryDt = entryDt;
+    }
 
+    public String getModDt() {
+        return modDt;
+    }
 
-	public Date getEntryDt() {
-		return entryDt;
-	}
+    public void setModDt(String modDt) {
+        this.modDt = modDt;
+    }
 
+    public Integer getpCost() {
+        return pCost;
+    }
 
-	public void setEntryDt(Date entryDt) {
-		this.entryDt = entryDt;
-	}
+    public void setpCost(Integer pCost) {
+        this.pCost = pCost;
+    }
 
+    public Integer getAdvance() {
+        return advance;
+    }
 
-	public Date getModDt() {
-		return modDt;
-	}
+    public void setAdvance(Integer advance) {
+        this.advance = advance;
+    }
 
+    public Integer getCommission() {
+        return commission;
+    }
 
-	public void setModDt(Date modDt) {
-		this.modDt = modDt;
-	}
+    public void setCommission(Integer commission) {
+        this.commission = commission;
+    }
 
+    public String getTimeAllotted() {
+        return TimeAllotted;
+    }
 
-	public Integer getpCost() {
-		return pCost;
-	}
+    public void setTimeAllotted(String timeAllotted) {
+        TimeAllotted = timeAllotted;
+    }
 
+    public String getpName() {
+        return pName;
+    }
 
-	public void setpCost(Integer pCost) {
-		this.pCost = pCost;
-	}
+    public void setpName(String pName) {
+        this.pName = pName;
+    }
 
+    public Integer getTotalCost() {
+        return TotalCost;
+    }
 
-	public Integer getAdvance() {
-		return advance;
-	}
+    public void setTotalCost(Integer totalCost) {
+        TotalCost = totalCost;
+    }
 
+    public String getPropSize() {
+        return propSize;
+    }
 
-	public void setAdvance(Integer advance) {
-		this.advance = advance;
-	}
+    public void setPropSize(String propSize) {
+        this.propSize = propSize;
+    }
 
+    public Integer getDepositamount() {
+        return depositamount;
+    }
 
-	public Integer getCommission() {
-		return commission;
-	}
+    public void setDepositamount(Integer depositamount) {
+        this.depositamount = depositamount;
+    }
 
-
-	public void setCommission(Integer commission) {
-		this.commission = commission;
-	}
-
-
-	public Date getTimeAllotted() {
-		return TimeAllotted;
-	}
-
-
-	public void setTimeAllotted(Date timeAllotted) {
-		TimeAllotted = timeAllotted;
-	}
-
-
-	public Integer getTotalCost() {
-		return TotalCost;
-	}
-
-
-	public void setTotalCost(Integer totalCost) {
-		TotalCost = totalCost;
-	}
-
-
-	public String getPropSize() {
-		return propSize;
-	}
-
-
-	public void setPropSize(String propSize) {
-		this.propSize = propSize;
-	}
-
-
-	public Integer getDepositamount() {
-		return depositamount;
-	}
-
-
-	public void setDepositamount(Integer depositamount) {
-		this.depositamount = depositamount;
-	}
-
-
-	@Column(name = "ENTRY_DT")
-	private Date entryDt;
-	
-	@Column(name = "MOD_DT")
-	private Date modDt;
-	
-	@Column(name = "PCOST")
-	private Integer pCost;
-	
-	@Column(name = "ADVANCE")
-	private Integer advance;
-	
-	@Column(name = "COMMISSION")
-	private Integer commission;
-	
-	@Column(name = "TIME_ALLOTED")
-	private Date TimeAllotted;
-	
-	
-	@Column(name = "TOTAL_COST")
-	private Integer TotalCost;
-	
-	@Column(name = "PROPERTY_SIZE")
-	private String propSize;
-	
-	
-	@Column(name = "DEPOSIT_AMOUNT")
-	private Integer depositamount;
-	
-	
+    @Override
+    public String toString() {
+        return "Property{" +
+                "pId=" + pId +
+                ", entryDt='" + entryDt + '\'' +
+                ", modDt='" + modDt + '\'' +
+                ", pCost=" + pCost +
+                ", advance=" + advance +
+                ", commission=" + commission +
+                ", TimeAllotted='" + TimeAllotted + '\'' +
+                ", pName='" + pName + '\'' +
+                ", TotalCost=" + TotalCost +
+                ", propSize='" + propSize + '\'' +
+                ", depositamount=" + depositamount +
+                '}';
+    }
 }
